@@ -1,0 +1,300 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Fonts*/
+
+.khand-light {
+  font-family: "Khand", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+.khand-regular {
+  font-family: "Khand", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.khand-medium {
+  font-family: "Khand", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+}
+
+.khand-semibold {
+  font-family: "Khand", sans-serif;
+  font-weight: 600;
+  font-style: normal;
+}
+
+.khand-bold {
+  font-family: "Khand", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+}  
+
+/* Menu */
+#nav {
+background-color: black;
+position: fixed;
+top: 0;
+left: 0;
+right: 0;
+z-index: 999;
+display: flex;
+justify-content: space-between;
+align-items: center;
+height: 70px;
+padding: 0 20px;
+color: #fff;
+}
+
+.logo {
+width: 150px;
+}
+
+.logo img {
+width: 100%;
+height: auto;
+}
+
+.hamburger-menu {
+display: none; /* Esconder o menu hamburger em telas maiores */
+cursor: pointer;
+}
+
+.hamburger-menu .bar {
+display: block;
+width: 25px;
+height: 3px;
+background-color: #fff;
+margin: 5px 0;
+transition: 0.4s;
+}
+
+.nav-links {
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+.nav-links .dropdown {
+position: relative;
+margin-right: 20px;
+}
+
+.nav-links h2 {
+margin: 0 15px;
+}
+
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 999;
+}
+
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+display: block;
+}
+
+.nav-fake {
+width: 100%;
+height: 70px;
+}
+
+/* Media query para tornar o menu responsivo */
+
+@media screen and (max-width: 768px) {
+.hamburger-menu {
+    display: block; /* Mostrar o botão de menu hamburger em telas menores */
+}
+
+.nav-links {
+    display: none; /* Esconder links principais */
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background-color: black;
+    z-index: 998; /* Abaixo do menu principal */
+}
+
+.nav-links.active {
+    display: flex; /* Mostrar links principais quando o menu está aberto */
+}
+
+.nav-links h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+.dropdown {
+    display: block; /* Garantir que dropdowns sejam visíveis */
+    width: 100%;
+}
+}
+
+/* section */
+
+.content {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(29, 28, 28);
+}
+
+.screen {
+  margin-top: 50px;
+  background-color: rgb(63, 62, 62);
+  margin-right: 50px;
+}
+
+.statistics {
+  margin-top: 50px;
+  background-color: rgb(63, 62, 62);
+}
+
+/* section 2 */
+
+.arrow {
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+  transform: rotate(180deg);
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nocenter {
+  color: #fff;
+  font-size: 20px;
+  justify-content: start !important;
+  flex-direction: column;
+}
+
+.blocks {
+  margin-top: 20px;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+}
+
+.block {
+  width: 300px;
+  height: 400px;
+  background-color: rgb(63, 62, 62);
+}
+
+/* Models */
+.car {
+margin-top: 20px;
+}
+.car>img {
+  width: 500px;
+}
+
+.code {
+  margin-top: 50px;
+  margin-bottom: 20px;
+}
+.code img {
+  width: 100px;
+}
+
+.column {
+  flex-direction: column !important;
+}
+
+/* Footer*/
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100% !important;
+  justify-content: start;
+  align-items: center;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: 100px;
+}
+
+.social-media div {
+  font-size: 15px !important;
+  text-align: center;
+  margin-left: 0 !important;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* responsive */
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+  }
+  .screen {
+    width: 100%;
+    margin-right: 0;
+  }
+  .nocenter {
+    text-align: center;
+  }
+  .block {
+    width: 30%;
+    margin-right: 5px !important;
+  }
+  .car {
+    margin-top: 20px;
+  }
+  .car>img {
+    width: 100%;
+  }
+  .code>img {
+    margin-bottom: 20px;
+  }
+  .social-media {
+    justify-content: center;
+    align-items: center;
+  }
+  .copyright div {
+    text-align: center;
+  }
+}

@@ -1,0 +1,661 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Barra de rolagem */
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #fff;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #5f5e66;
+}
+
+/*Fontes*/
+
+.khand-light {
+    font-family: "Khand", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+  }
+  
+  .khand-regular {
+    font-family: "Khand", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+  }
+  
+  .khand-medium {
+    font-family: "Khand", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  .khand-semibold {
+    font-family: "Khand", sans-serif;
+    font-weight: 600;
+    font-style: normal;
+  }
+  
+  .khand-bold {
+    font-family: "Khand", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+  }  
+
+/* Menu */
+#nav {
+  background-color: black;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  padding: 0 20px;
+  color: #fff;
+}
+
+.logo {
+  width: 150px;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.hamburger-menu {
+  display: none; /* Esconder o menu hamburger em telas maiores */
+  cursor: pointer;
+}
+
+.hamburger-menu .bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+  margin: 5px 0;
+  transition: 0.4s;
+}
+
+.nav-links {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nav-links .dropdown {
+  position: relative;
+  margin-right: 20px;
+}
+
+.nav-links h2 {
+  margin: 0 15px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 999;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.nav-fake {
+  width: 100%;
+  height: 70px;
+}
+
+/* Media query para tornar o menu responsivo */
+
+@media screen and (max-width: 768px) {
+  .hamburger-menu {
+      display: block; /* Mostrar o botão de menu hamburger em telas menores */
+  }
+
+  .nav-links {
+      display: none; /* Esconder links principais */
+      flex-direction: column;
+      position: absolute;
+      top: 70px;
+      left: 0;
+      right: 0;
+      background-color: black;
+      z-index: 998; /* Abaixo do menu principal */
+  }
+
+  .nav-links.active {
+      display: flex; /* Mostrar links principais quando o menu está aberto */
+  }
+
+  .nav-links h2 {
+      margin: 10px 0;
+      text-align: center;
+  }
+
+  .dropdown {
+      display: block; /* Garantir que dropdowns sejam visíveis */
+      width: 100%;
+  }
+}
+
+/* section 1 */
+#slide {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#video_init {
+  width: 100%;
+  height: 100%;
+}
+
+.discover {
+  transform: rotate(90deg);
+  width: 40px;
+  height: 40px;
+}
+
+#elements_slide {
+  margin-top: 200px;
+  position:absolute;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.align_row {
+  display: flex;
+  flex-direction: row;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+}
+
+/* Section Drivers*/
+
+.pilots {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.div_pilot1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 1000px;
+  margin-left: 100px;
+}
+.div_pilot2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  width: 1000px;
+  margin-right: 100px;
+}
+.pilot_1 {
+  background-color: #2B2A2A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+}
+.pilot_1>h1 {
+  margin-bottom: 100px;
+  margin-left: 30px;
+}
+
+.pilot_2 {
+  background-color: #2B2A2A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  height: 300px;
+}
+.pilot_2>h1 {
+  margin-bottom: 100px;
+  margin-left: 30px;
+}
+
+.pilot_1>img, .pilot_2>img {
+  position: absolute;
+  margin-left: 180px;
+  margin-top: 200px;
+  transform: rotate(80deg);
+  width: 80px;
+  height: 200px;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
+.space_b {
+  justify-content: space-between;
+}
+
+.arrow {
+  margin-top: 50px;
+  width: 50px;
+  height: 50px;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/*Section Car*/
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.black {
+  background-color: black;
+}
+
+.absolute {
+  position: absolute;
+}
+
+.text-car {
+  margin-left: 100px;
+  margin-top: 100px;
+  color: #fff;
+  max-width: 700px;
+}
+
+.elements_car {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.specifications {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 50px;
+  margin-left: 100px;
+  max-width: 604px;
+  height: 204px;
+  border: 1px solid #fff;
+}
+
+.squad_1, .squad_2, .squad_3, .squad_4 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  border: 1px solid #fff;
+  width: 300px;
+  height: 100px;
+}
+
+.photo_car {
+  max-width: 600px;
+}
+
+.photo_car>img {
+  margin-left: 50px;
+  width: 500px;
+}
+
+.arrow_page {
+  width: 50px;
+  height: 50px;
+  transform: rotate(180deg);
+}
+/* Section Calendar */
+
+.content_calendar {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.rectangle {
+  color: #fff;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: 450px;
+  background-color: #362F2F;
+  position: relative;
+  margin: 20px;
+}
+
+.photo_place {
+  width: 300px;
+  height: 200px;
+}
+
+.set_recta {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.autodromo {
+  width: 130px;
+  margin-right: 20px;
+}
+
+.country_flag {
+  width: 100px;
+  margin-left: 20px;
+}
+
+.name_city {
+  margin-right: 50px;
+}
+
+.slider-container {
+  position: relative;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.slider {
+  display: flex;
+  overflow: hidden;
+  width: 100%;
+}
+
+.slides {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  display: flex;
+  flex-direction: row;
+  min-width: 100%;
+  box-sizing: border-box;
+}
+
+.rectangle {
+  position: relative;
+  margin: 20px;
+}
+
+img.photo_place {
+  width: 100%;
+}
+
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Transition */
+
+.background_image {
+  background-image: url(./imagens/virtual-reality-4490469_1280.jpg);
+  width: 100%;
+  height: 100vh;
+}
+
+.mid {
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Steps */
+
+.steps {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  justify-content: space-between;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+.step {
+  width: 300px;
+  height: 400px;
+  background-color: #2B2A2A;
+}
+
+/* Footer*/
+
+.social-media {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 100% !important;
+  justify-content: start;
+  align-items: center;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: 100px;
+}
+
+.social-media div {
+  font-size: 15px !important;
+  text-align: center;
+  margin-left: 0 !important;
+}
+
+.logo-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Responsive */
+
+@media (max-width: 768px) {
+  #elements_slide {
+    margin-top: 0 !important;
+  }
+  #elements_slide h2 {
+    font-size: 20px !important;
+  }
+  #elements_slide h1 {
+    font-size: 30px !important;
+  }
+  #elements_slide div {
+    margin-top: 10px !important;
+  }
+
+  /* drivers */
+  #drivers>h1 {
+    margin-left: 20px !important;
+  }
+  .pilots {
+    flex-wrap: wrap;
+  }
+  .div_pilot1 {
+    width: 60%;
+  }
+  .div_pilot1 img {
+    margin-right: 220px !important;
+  }
+  .pilot_1 img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 100px !important;
+  }
+  .pilot_1 h1 {
+    font-size: 30px !important;
+    margin-bottom: 150px;
+  }
+  .pilot_1 h2 {
+    font-size: 40px !important;
+    margin-left: 50px !important;
+  }
+  
+  .div_pilot2 {
+    width: 60%;
+  }
+  .div_pilot2 img {
+    margin-right: 0px !important;
+    margin-left: 210px;
+  }
+  .pilot_2 img {
+    max-width: 100px;
+    max-height: 100px;
+    margin-right: 80px !important;
+    margin-left: 0 !important;
+  }
+  .pilot_2 h1 {
+    font-size: 30px !important;
+    margin-bottom: 150px;
+    margin-left: 0;
+  }
+  .pilot_2 h2 {
+    font-size: 40px !important;
+    margin-left: 0 !important;
+    margin-right: 70px !important;
+  }
+  .space_b div {
+    align-items: center;
+  }
+  .space_b div[class="khand-light row"] {
+    justify-content: center !important;
+    align-items: center !important;
+    margin-left: 0 !important;
+    margin-right: 10px;
+  }
+  .space_b a[href="https://www.mahindraracing.com/drivers/nyck-de-vries"] div {
+    margin-right: 0 !important;
+  }
+
+  /* car */
+  .column{
+    margin-left: 20px;
+  }
+  .elements_car {
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+  .photo_car>img {
+    width: 100%;
+    margin-left: 0;
+  }
+  .specifications {
+    width: 100%;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin-left: 0;
+  }
+  .squad_1,.squad_2,.squad_3,.squad_4 {
+    width: 50%;
+  }
+
+  /* Calendar */
+  #calendar {
+    margin-left: 0;
+  }
+  .slider-container {
+    width: 100%;
+  }
+  .slides {
+    transition: transform 5s ease-in-out;
+  }
+  /* Vr background*/
+  .background_image div {
+    flex-direction: column;
+    align-items: center;
+  }
+  .background_image div h2 {
+    margin-right: 0 !important;
+  }
+  /* How to watch*/
+  section[style="display: flex; align-items: center; height: 100vh;"] {
+    margin-left: 0;
+  }
+  .steps {
+    width: 100%;
+  }
+  .step {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    width: 30%;
+    height: auto;
+  }
+
+  /* footer */
+  .social-media {
+    justify-content: center;
+    align-items: center;
+  }
+  .center_f {
+    text-align: center;
+  }
+}

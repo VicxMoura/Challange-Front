@@ -51,18 +51,18 @@ background: #5f5e66;
 
 /* Menu */
 #nav {
-background-color: black;
-position: fixed;
-top: 0;
-left: 0;
-right: 0;
-z-index: 999;
-display: flex;
-justify-content: space-between;
-align-items: center;
-height: 70px;
-padding: 0 20px;
-color: #fff;
+  display: grid;
+  grid-template-columns: 150px auto;
+  align-items: center;
+  background-color: black;
+  height: 70px;
+  padding: 0 20px;
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
 }
 
 .logo {
@@ -308,9 +308,10 @@ max-width: 700px;
 }
 
 .elements_car {
-width: 100%;
-display: flex;
-flex-direction: row;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 40px;
+  align-items: center;
 }
 
 .specifications {
@@ -352,10 +353,11 @@ transform: rotate(180deg);
 /* Section Calendar */
 
 .content_calendar {
-display: flex;
-flex-direction: row;
-justify-content: center;
-align-items: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  align-items: start;
 }
 
 .rectangle {
@@ -512,9 +514,10 @@ height: 100px;
 }
 
 .copyright {
-display: flex;
-align-items: center;
-justify-content: center;
+  display: grid;
+  place-items: center;
+  background-color: #fff;
+  color: black;
 }
 
 /* Responsive */
@@ -652,9 +655,15 @@ section[style="display: flex; align-items: center; height: 100vh;"] {
 
 /* footer */
 .social-media {
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Colunas ajustáveis conforme o espaço */
+  width: 100%;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+  height: 100px;
   align-items: center;
 }
+
 .center_f {
   text-align: center;
 }
